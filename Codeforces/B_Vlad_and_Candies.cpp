@@ -3,10 +3,10 @@ using namespace std;
 #include <bits/stdc++.h>
 int main()
 {
-    int t;
+int t;
     cin >> t;
     long long n;
-
+    
     for (int i = t; i > 0; i--)
     {
         cin >> n;
