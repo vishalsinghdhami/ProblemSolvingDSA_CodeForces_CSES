@@ -3,15 +3,17 @@ using namespace std;
 
 main()
 {
-int n,x;
-cin>>n>>x;
- 
-int v[n];
-for(int i=0;i<n;i++)
+int n,tw;
+cin>>n>>tw;
+ vector<long long>v;
+while(n--)
 {
-
-cin>>v[i];
+    long long x;
+    cin>>x;
+    v.push_back(x);
 }
+for(int i=0;i<v.size();)
+
 
 
 
