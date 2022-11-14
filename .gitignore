@@ -1,5 +1,8 @@
 .prob
 .json
-.exe
+*.json
 .vscode
 .cph
+*.bin
+*.exe
+*.cph
