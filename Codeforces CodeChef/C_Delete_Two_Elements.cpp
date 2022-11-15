@@ -7,22 +7,30 @@ using namespace std;
 int main(){
 int t ;cin>>t;
 while(t--)
-{long long n;
- cin>>n;
- long long arr[n];
- for(int i=0;i<n;i++)
- {
-    cin>>arr[i];
- }
- double k;
-
-
-
- else{
-    cout<<0<<endl;
- }
+{ int n;
+    scanf("%d", &n);
+    vector<int> a(n);
+    map<int, int> cnt;
+    for (auto &x : a) {
+      scanf("%d", &x);
+      cnt[x] += 1;
+    }
+    long long sum = accumulate(a.begin(), a.end(), 0LL);
+    if ((2 * sum) % n != 0) {
+      puts("0");
+      continue;
+    }
+    long long need = (2 * sum) / n;
+    long long ans = 0;
+    for (int i = 0; i < n; ++i) {
+      int a1 = a[i];
+      int a2 = need - a1;
+      if (cnt.count(a2)) 
+      {ans += cnt[a2];}
+      if (a1 == a2) ans -= 1;//-1 for the self value
+    }
  
- 
+ cout<<ans<<endl;
 }
 
 return 0;
